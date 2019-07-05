@@ -1,0 +1,12 @@
+<div>
+<div *ngIf="mod1">
+<div *ngFor='let ab of mod1.results.modules;let i=index '> 
+    <div class="sc">
+        <div class="m">
+       <img [routerLink]="['/lessons', ab._id]" src="https://images.pexels.com/photos/66869/green-leaf-natural-wallpaper-royalty-free-66869.jpeg?cs=srgb&dl=green-green-leaf-nature-66869.jpg&fm=jpg" alt="green" width="250" height="250"/>
+       <div  class="titles"> Module {{i+1}}<br /> {{ab.title}}  </div>
+       </div>
+       </div>
+</div>
+</div>
+</div>
