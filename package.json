@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~8.1.0",
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.9.0",
+    "@types/lodash": "^4.14.135",
+    "lodash": "^4.17.11",
+    "rxjs": "^6.4.0",
+    "rxjs-compat": "^6.5.2",
+    "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

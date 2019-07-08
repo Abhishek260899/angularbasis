@@ -1,12 +1,13 @@
 export interface IModule {
-    id: number;
+    _id: number;
     title:string;
     lessons:ILessons[];
     reward:number;
     message:string;
+    
 }
 
-export interface results{
+export interface Iresults{
     module:IModule[]
 }
 export interface ILessons {
@@ -14,7 +15,7 @@ export interface ILessons {
    title:string;
    position:number;
    cards:ICards[];
-   result:results;
+   result:Iresults;
 }
 
 export interface ICards {

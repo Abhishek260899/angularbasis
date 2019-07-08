@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { DataService } from '../core/data.service';
-import {  ILessons } from 'src/shared/Interfaces';
+import {  ILessons, IModule } from 'src/shared/Interfaces';
 
 @Component({
   selector: 'app-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: [ './orders.component.css' ]
+  templateUrl: './les.html',
+
 })
 export class LessonComponent implements OnInit {
 
-  Lesson: ILessons[] = [];
+  Lesson: IModule[] = [];
   
 
   constructor(private dataService: DataService, 
@@ -19,7 +19,7 @@ export class LessonComponent implements OnInit {
 
   ngOnInit() {
     let id = +this.route.snapshot.paramMap.get('id');
-    this.dataService.getOrders(id).subscribe((les: ILessons[]) => {
+    this.dataService.getModules().subscribe((les: IModule[]) => {
       this.Lesson = les;
     });
 

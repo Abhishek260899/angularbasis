@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import  { Observable} from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import {IModule,ILessons} from 'src/shared/Interfaces'
+import {IModule,ILessons, Iresults} from 'src/shared/Interfaces'
 import { RequestOptions } from '@angular/http'
 
 
 @Injectable()
 export class DataService {
-     bearer='Bearer 5d199c8763a13328ad7a15c5,eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMTk5Yzg3NjNhMTMzMjhhZDdhMTVjNSIsImlhdCI6MTU2MTk1OTU1OSwiZXhwIjoxNTYyNTY0MzU5fQ.11QXokuYj3PiI966NXGrYrzr65UWGAYFaZj1ZrL2aLc';
-
-    baseUrl: string = 'https://dev.getbasis.co/v1/users/5d199c8763a13328ad7a15c5/modules';
+     bearer='Bearer 5ccbe400bb8d7046a927538c,eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2JlNDAwYmI4ZDcwNDZhOTI3NTM4YyIsImlhdCI6MTU2MjU3MTkxOCwiZXhwIjoxNTYzMTc2NzE4fQ.RgpNCV-m6GNrvuLEeqqeHKS38qH4pq57hj5lwA6frxI';
+    baseUrl: string = 'https://dev.getbasis.co/v1/users/5ccbe400bb8d7046a927538c/modules';
     
     constructor(private http: HttpClient) { }
 
@@ -29,22 +28,7 @@ export class DataService {
             );
     }
             
-    getOrders(id: number) : Observable<ILessons[]> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-              'Content-Type':  'application/json',
-              'Authorization': this.bearer
-            })}
-        return this.http.get<ILessons[]>(this.baseUrl,httpOptions)
-          .pipe(
-            map(les => {
-              let custOrders = les.filter((order: ILessons) => order.result.module.id === id);
-              return custOrders;
-            }),
-            catchError(this.handleError)
-          );
-      }
-
+   
     private handleError(error: any) {
       console.error('server error:', error);
       if (error.error instanceof Error) {
