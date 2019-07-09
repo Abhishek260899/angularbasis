@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import {ModRoutingModule} from 'C:/Users/Abhishek Mehta/angularbasis/src/app/mod/mod.routing' 
 import {ModComponent} from 'C:/Users/Abhishek Mehta/angularbasis/src/app/mod/mod.component'
 import {CoreModule} from 'src/core/core.module'
+import {CardModule} from 'src/cards/cards.modules'
 @NgModule({
-  imports:      [ CommonModule, FormsModule,ModRoutingModule,CoreModule  ],
+  imports:      [ CommonModule, FormsModule,ModRoutingModule,CoreModule,CardModule  ],
   declarations: [ ModComponent],
   exports: [ ModComponent ]
 })

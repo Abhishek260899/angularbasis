@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {ModModule} from 'C:/Users/Abhishek Mehta/angularbasis/src/app/mod/mod.modules';
 import {CoreModule} from 'src/core/core.module';
 import { LessonModule } from 'src/les/les.modules'
+import {CardModule} from 'src/cards/cards.modules'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LessonModule } from 'src/les/les.modules'
     AppRoutingModule,
     ModModule,
     CoreModule,
-    LessonModule
+    LessonModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

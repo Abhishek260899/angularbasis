@@ -17,6 +17,7 @@ export class ModComponent implements OnInit {
   mod3:any;
   temp2:any;
   showresult:boolean=false;
+  card:any;
   constructor(private dataService: DataService) { }
  onClick(event){
   this.id1=event.target.id.toString();
@@ -26,7 +27,7 @@ export class ModComponent implements OnInit {
  }
  onLessonClick(event){
  this.id2=event.target.id.toString();
- 
+ this.card=this.mod3[this.id2][0].cards;
  }
   ngOnInit() {
     this.dataService.getModules()
