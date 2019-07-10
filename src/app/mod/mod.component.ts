@@ -45,7 +45,7 @@ export class ModComponent implements OnInit {
   }
   
     
-  
+  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`)
   // temp2 = groupBy(this.mod1.results.modules,'_id');
 
 }

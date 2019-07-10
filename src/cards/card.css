@@ -1,0 +1,26 @@
+.cd{
+    position: absolute;
+    top:25%;
+}
+.d{
+    color:white;
+}
+.customa{
+    position: relative;
+    text-align: center;
+    color:white;
+    padding-top: 5%;
+}
+.dg{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      
+}
+.df{
+    position: absolute;
+    top: 25%;
+    left: 42%;
+}

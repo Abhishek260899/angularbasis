@@ -1,6 +1,18 @@
-<div *ngIf='card2'>
-<div *ngFor='let ef of card2.results.cards'>
-    <h3>{{ef.title}}</h3>
-    <div>{{ef.content}}</div>>
-</div>
+
+
+<div *ngIf='card2'> 
+<ngb-carousel *ngIf="checkImages" data-interval="false">
+    
+    <div *ngFor='let ef of card2.results.cards'>
+        <ng-template ngbSlide>
+          <div class="customa">
+          <img src="{{img}}" alt="white" style="width:55%">
+          
+            <h3 class="df">{{ef.title}}</h3>
+            <div class="dg" [innerHTML]="ef.content"></div>
+        </div>
+        </ng-template>
+        </div>
+      
+      </ngb-carousel>
 </div>

@@ -1,3 +1,4 @@
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,7 @@ import {ModModule} from 'C:/Users/Abhishek Mehta/angularbasis/src/app/mod/mod.mo
 import {CoreModule} from 'src/core/core.module';
 import { LessonModule } from 'src/les/les.modules'
 import {CardModule} from 'src/cards/cards.modules'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {CardModule} from 'src/cards/cards.modules'
     ModModule,
     CoreModule,
     LessonModule,
-    CardModule
+    CardModule,
+    // NgbModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
